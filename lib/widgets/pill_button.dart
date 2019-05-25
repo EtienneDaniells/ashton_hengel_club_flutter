@@ -14,6 +14,7 @@ class PillButton extends StatelessWidget {
   final Color borderColor;
   final Icon icon;
   final TextStyle textStyle;
+  final Alignment alignment;
 
   const PillButton(this.text,
       {Key key,
@@ -27,35 +28,50 @@ class PillButton extends StatelessWidget {
       this.borderWidth = 2,
       this.borderColor = SECONDARY_COLOR,
       this.icon,
-      this.textStyle = const TextStyle(color: Colors.white, fontSize: 20)})
+      this.textStyle = const TextStyle(color: Colors.white, fontSize: 20),
+      this.alignment = Alignment.center})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        InkWell(
-          onTap: onTap,
-          onLongPress: onLongPress,
-          splashColor: disableTapEffects ? Colors.transparent : Colors.white.withOpacity(0.15),
-          highlightColor: disableTapEffects ? Colors.transparent : Colors.white.withOpacity(0.15),
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            alignment: Alignment.center,
-            height: height,
-            width: width,
-            child: Text(
-              text,
-              style: textStyle,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              color: backgroundColor,
-              border: Border.all(color: borderColor, width: borderWidth),
-            ),
-          ),
-        ),
-      ],
-    );
+    return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        child: InkWell(
+            borderRadius: BorderRadius.circular(30),
+            onTap: onTap,
+            onLongPress: onLongPress,
+            splashColor: disableTapEffects ? Colors.transparent : Colors.black,
+            highlightColor:
+                disableTapEffects ? Colors.transparent : Colors.black,
+            child: Stack(
+              alignment: Alignment.centerRight,
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.center,
+                  height: height,
+                  width: width,
+                  child: Text(
+                    text,
+                    style: textStyle,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: backgroundColor,
+                    border: Border.all(color: borderColor, width: borderWidth),
+                  ),
+                ),
+                icon == null ? Container() :Container(
+                  alignment: Alignment.center,
+                  height: height,
+                  width: height,
+                  child: icon,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border:
+                          Border.all(color: borderColor, width: borderWidth)),
+                ),
+              ],
+            )
+            ));
   }
 }

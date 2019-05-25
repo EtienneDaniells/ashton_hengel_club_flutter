@@ -17,7 +17,14 @@ class LoginPage extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
-            child: PillButton("Login", onTap: (){Navigator.push(context, MaterialPageRoute(builder: (b)=> HomePage()));},),
+            child: PillButton(
+              "Login",
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (b) => HomePage(title: "Home",)));
+              },
+              icon: Icon(Icons.ac_unit, color: Colors.white,),
+            ),
           ),
         ],
       ),
