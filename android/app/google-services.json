@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "58087418363",
+    "firebase_url": "https://ashtonhengelklub.firebaseio.com",
+    "project_id": "ashtonhengelklub",
+    "storage_bucket": "ashtonhengelklub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58087418363:android:c4662abc445258f2",
+        "android_client_info": {
+          "package_name": "com.example.ashton_hengel_club"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58087418363-laoarmo1m0so32llvfc891jiup9gqe0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2vMz-0dlO0rOJGz_7P-_rY1i-Ew7-icY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58087418363-laoarmo1m0so32llvfc891jiup9gqe0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

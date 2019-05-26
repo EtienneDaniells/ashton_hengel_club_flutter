@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 alignment: Alignment.centerLeft,
                 backgroundColor: SECONDARY_COLOR.withOpacity(0.5),
                 borderColor: PRIMARY_COLOR,
-                onTap: (){
+                onTap: () {
                   print("$event Tapped");
                 },
               ))
@@ -136,6 +136,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       backgroundColor: BACKGROUND_COLOR,
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

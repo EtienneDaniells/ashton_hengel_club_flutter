@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
               "Login",
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (b) => HomePage(title: "Home",)));
+                    context, MaterialPageRoute(builder: (b) => HomePage()));
               },
               icon: Icon(Icons.ac_unit, color: Colors.white,),
             ),
