@@ -1,5 +1,5 @@
 import 'package:ashton_hengel_club/global/colors.dart';
-import 'package:ashton_hengel_club/widgets/pill_button.dart';
+import 'package:ashton_hengel_club/widgets/capsule_button.dart';
 import 'package:date_utils/date_utils.dart';
 import 'package:date_utils/date_utils.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget _buildEventList() {
     return ListView(
       children: _selectedEvents
-          .map((event) => PillButton(
+          .map((event) => CapsuleButton(
                 "$event",
                 textStyle: TextStyle(color: PRIMARY_COLOR, fontSize: 18),
                 height: 40,
@@ -140,7 +140,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Container(

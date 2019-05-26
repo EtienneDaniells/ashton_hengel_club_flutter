@@ -1,7 +1,7 @@
 import 'package:ashton_hengel_club/global/colors.dart';
 import 'package:flutter/material.dart';
 
-class PillButton extends StatelessWidget {
+class CapsuleButton extends StatelessWidget {
   final String text;
   final bool enabled;
   final double height;
@@ -16,7 +16,7 @@ class PillButton extends StatelessWidget {
   final TextStyle textStyle;
   final Alignment alignment;
 
-  const PillButton(this.text,
+  const CapsuleButton(this.text,
       {Key key,
       this.enabled = true,
       this.height = 56.5,
@@ -34,8 +34,9 @@ class PillButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+    return Container(
+        width: width,
+        height: height,
         child: InkWell(
             borderRadius: BorderRadius.circular(30),
             onTap: onTap,
@@ -44,7 +45,6 @@ class PillButton extends StatelessWidget {
             highlightColor:
                 disableTapEffects ? Colors.transparent : Colors.black,
             child: Stack(
-              alignment: Alignment.centerRight,
               children: <Widget>[
                 Container(
                   alignment: Alignment.center,
@@ -60,7 +60,7 @@ class PillButton extends StatelessWidget {
                     border: Border.all(color: borderColor, width: borderWidth),
                   ),
                 ),
-                icon == null ? Container() :Container(
+                icon == null ? Container(width: width,) :Container(
                   alignment: Alignment.center,
                   height: height,
                   width: height,

@@ -1,6 +1,6 @@
 import 'package:ashton_hengel_club/global/colors.dart';
 import 'package:ashton_hengel_club/state/home_screen.dart';
-import 'package:ashton_hengel_club/widgets/pill_button.dart';
+import 'package:ashton_hengel_club/widgets/capsule_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,13 +17,12 @@ class LoginPage extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
-            child: PillButton(
+            child: CapsuleButton(
               "Login",
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (b) => HomePage()));
+                    context, MaterialPageRoute(builder: (b) => HomePage(title: "Home",)));
               },
-              icon: Icon(Icons.ac_unit, color: Colors.white,),
             ),
           ),
         ],
