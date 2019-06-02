@@ -1,9 +1,6 @@
 import 'package:ashton_hengel_club/global/colors.dart';
 import 'package:ashton_hengel_club/widgets/capsule_button.dart';
-import 'package:date_utils/date_utils.dart';
-import 'package:date_utils/date_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 // Example holidays
@@ -36,9 +33,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     super.initState();
     _selectedDay = DateTime.now();
     _events = {
-      DateTime(2019, 05, 12): ['Event A0', 'Event B0', 'Event C0'],
+      DateTime(2019, 05, 12): ['5 Spesie', 'Event B0', 'Event C0'],
       DateTime(2019, 05, 19): ['Event A1'],
-      DateTime(2019, 05, 26): ['Event A2', 'Event B2', 'Event C2', 'Event D2'],
+      DateTime(2019, 05, 26): ['Event A2', 'Event B2', 'Event C2', 'Event D2'],      
+      DateTime(2019, 05, 23): ['New Event'],
     };
 
     _selectedEvents = _events[_selectedDay] ?? [];
@@ -75,8 +73,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget _buildCalendar() {
     return TableCalendar(
       daysOfWeekStyle: DaysOfWeekStyle(
-        weekdayStyle: TextStyle(color: PRIMARY_COLOR, fontSize: 16),
-        weekendStyle: TextStyle(color: PRIMARY_COLOR, fontSize: 16),
+        weekdayStyle: TextStyle(color: Colors.black, fontSize: 16),
+        weekendStyle: TextStyle(color: Colors.black, fontSize: 16),
       ),
       locale: 'en_US',
       events: _visibleEvents,
@@ -94,16 +92,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       headerStyle: HeaderStyle(
         leftChevronIcon: Icon(
           Icons.chevron_left,
-          color: PRIMARY_COLOR,
+          color: Colors.black,
           size: 30,
         ),
         rightChevronIcon: Icon(
           Icons.chevron_right,
-          color: PRIMARY_COLOR,
+          color: Colors.black,
           size: 30,
         ),
         centerHeaderTitle: true,
-        titleTextStyle: TextStyle(color: PRIMARY_COLOR, fontSize: 24),
+        titleTextStyle: TextStyle(color: Colors.black, fontSize: 24),
         formatButtonVisible: false,
       ),
       onDaySelected: _onDaySelected,
@@ -114,18 +112,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget _buildEventList() {
     return ListView(
       children: _selectedEvents
-          .map((event) => CapsuleButton(
+          .map((event) => Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: CapsuleButton(
                 "$event",
                 textStyle: TextStyle(color: PRIMARY_COLOR, fontSize: 18),
                 height: 40,
-                width: 180,
-                alignment: Alignment.centerLeft,
-                backgroundColor: SECONDARY_COLOR.withOpacity(0.5),
+                width: 250,
+                alignment: Alignment.center,
+                backgroundColor: Colors.grey[350],
                 borderColor: PRIMARY_COLOR,
                 onTap: () {
                   print("$event Tapped");
                 },
-              ))
+              ),
+          ))
           .toList(),
     );
   }

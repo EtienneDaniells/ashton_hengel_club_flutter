@@ -35,6 +35,7 @@ class CapsuleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: alignment,
         width: width,
         height: height,
         child: InkWell(

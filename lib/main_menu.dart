@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
             child: CapsuleButton(
               "Login",
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                     context, MaterialPageRoute(builder: (b) => HomePage(title: "Home",)));
               },
             ),

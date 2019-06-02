@@ -1,5 +1,7 @@
 import 'dart:ui';
 
-  const Color PRIMARY_COLOR = Color(0xff601515);
-  const Color SECONDARY_COLOR = Color(0xffd6d6d6);
-  const Color BACKGROUND_COLOR = Color(0xff152d60);
+import 'package:flutter/material.dart';
+
+  const Color PRIMARY_COLOR = Color(0xffbf0000); //Red
+  const Color SECONDARY_COLOR = Colors.white;//Color(0xffd6d6d6); //Grey - white
+  const Color BACKGROUND_COLOR = Color(0xff031026); //Navy
