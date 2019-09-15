@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'AHK',
       theme: ThemeData(
         primaryColor: PRIMARY_COLOR,
-        accentColor: SECONDARY_COLOR,
+        accentColor: BACKGROUND_COLOR,
         backgroundColor: BACKGROUND_COLOR,
       ),
       home: LoginPage(),

@@ -8,7 +8,7 @@ class Event {
 
   final String name;
   final DateTime date;
-  final List<String> sponsers;
+  final List<String> sponsors;
   final String description;
   final DateTime linesIn;
   final DateTime weighIn;
@@ -29,7 +29,7 @@ class Event {
       this.updatedOn,
       this.createdBy,
       this.updatedBy,
-      this.sponsers,
+      this.sponsors,
       this.linesIn,
       this.weighIn,
       this.location});
@@ -41,7 +41,7 @@ class Event {
         name: snapshot.data['Name'],
         date: snapshot.data['Date'],
         description: snapshot.data['Description'],
-        sponsers: snapshot.data['Sponsers'],
+        sponsors: snapshot.data['Sponsors'],
         linesIn: snapshot.data['Lines In'],
         weighIn: snapshot.data['Weigh In'],
         location: snapshot.data['Location'],
@@ -62,7 +62,7 @@ class Event {
       'Name' : name,
       'Date' : date,
       'Description' : description,
-      'Sponsers' : sponsers,
+      'Sponsors' : sponsors,
       'Lines In' : linesIn,
       'Weight In' : weighIn,
       'Location' : location,
