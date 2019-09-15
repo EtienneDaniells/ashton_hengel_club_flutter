@@ -1,4 +1,5 @@
 import 'package:ashton_hengel_club/global/colors.dart';
+import 'package:ashton_hengel_club/screens/createEvent.dart';
 import 'package:ashton_hengel_club/widgets/capsule_button.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -149,6 +150,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           const SizedBox(height: 8.0),
           Expanded(child: _buildEventList()),
+          CapsuleButton('CREATE EVENT', onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (b)=> CreateEvent()));
+          },)
         ],
       ),
     );

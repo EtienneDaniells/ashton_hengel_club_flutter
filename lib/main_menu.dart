@@ -1,5 +1,5 @@
 import 'package:ashton_hengel_club/global/colors.dart';
-import 'package:ashton_hengel_club/state/home_screen.dart';
+import 'package:ashton_hengel_club/screens/home_screen.dart';
 import 'package:ashton_hengel_club/widgets/capsule_button.dart';
 import 'package:flutter/material.dart';
 
